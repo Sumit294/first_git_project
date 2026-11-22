@@ -1,0 +1,9 @@
+name: My first workflow
+on: push
+
+jobs:
+text:
+runs-on:
+steps:
+- name: Display message
+run: echo "Helow world github actions"
