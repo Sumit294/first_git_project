@@ -1,9 +1,11 @@
-name: My first workflow
-on: push
+name: My First Workflow
+
+on:
+  push:
 
 jobs:
-text:
-runs-on: ubuntu-latest
-steps:
-- name: Display message
-run: echo "Helow world github actions"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display message
+        run: echo "Hello from GitHub Actions"
