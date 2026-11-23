@@ -6,15 +6,16 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Download repository
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Check index.html
         run: |
           if [ -f index.html ]; then
-              echo "success: index.html exixts"
-                 else
-              echo "Error: index.html is not exixte"
-                  exit 1
-                 fi
+            echo "Success: index.html exists"
+          else
+            echo "Error: index.html is missing"
+            exit 1
+          fi
