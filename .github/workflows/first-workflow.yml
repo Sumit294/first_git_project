@@ -12,7 +12,7 @@ jobs:
 
       - name: Check index.html
         run: |
-          if [ -f index.html ]; then 
+          if [ -f index.html ]; then
               echo "success: index.html exixts"
                  else
               echo "Error: index.html is not exixte"
