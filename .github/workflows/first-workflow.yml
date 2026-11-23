@@ -11,7 +11,7 @@ jobs:
       - name: Download repository
         uses: actions/checkout@v4
 
-      - name: Check index.html
+      - name: Check index.html exists
         run: |
           if [ -f index.html ]; then
             echo "Success: index.html exists"
@@ -20,11 +20,11 @@ jobs:
             exit 1
           fi
 
-        - name: check the required text
-          run: |
-             if grep -q "welcome to my website" index.html; then
-                  echo "Success: the text is found"
-              else
-                   echo "ERROR: the text is not found"
-                   exit 1
-                 fi
+      - name: Check required text
+        run: |
+          if grep -q "welcome to my website" index.html; then
+            echo "Success: Hello World text found"
+          else
+            echo "Error: Hello World text not found"
+            exit 1
+          fi
