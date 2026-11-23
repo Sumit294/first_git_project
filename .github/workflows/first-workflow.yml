@@ -22,7 +22,7 @@ jobs:
 
         - name: check the required text
           run: |
-             if grep -q "MY first Git project" index.html; then
+             if grep -q "welcome to my website" index.html; then
                   echo "Success: the text is found"
               else
                    echo "ERROR: the text is not found"
